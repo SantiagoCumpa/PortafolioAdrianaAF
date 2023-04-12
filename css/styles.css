@@ -1,0 +1,479 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+@import url('https://fonts.cdnfonts.com/css/sergio-trendy');
+
+*, *::before, *::after{
+   box-sizing: border-box;
+   color: black;
+}
+
+body{
+   font-family: 'Nunito','Sergio Trendy', 'sans serif';
+   min-height: 100vh;
+}
+
+:root{
+   --first-main: #adb6e9;
+   --second-main: #9799d1;
+   --third-main: #F4A276;
+}
+
+/* Section Banner */
+#banner{
+   background-image:  url(../img/backgrounds/bgBanner.svg);
+   height: 100vh;
+   background-repeat: no-repeat;
+   background-size: cover;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+.banner__img{
+   margin: 0 60px;
+   width: 75%;
+}
+
+/* Header */
+.header{
+   display: flex;
+   justify-content: space-between;
+   padding: 10px 20px;
+   background-color: var(--third-main);
+   height: 80px;
+}
+
+/* Logo */
+.header__logo{
+   display: flex;
+   justify-content: space-between;
+   width: 150px;
+   gap: 20px;
+}
+.header__logo__span{
+   display: flex;
+   align-items: center;
+   color: white;
+   font-weight: bolder;
+   font-size: 1.5rem;
+}
+
+/* navbar */
+.navbar{
+   display: flex;
+   justify-content: space-evenly;
+   align-items: center;
+   width: 300px;
+}
+.nav__link{
+   transition:
+      background-color .5s,
+      border-radius .5s,
+      color .5s;
+   display: flex;
+   align-items: center;
+   text-decoration: none;
+   height: 40px;
+   font-size: 1rem;
+   font-weight: bold;
+   border-radius: 5px;
+   margin: 3px 0;
+   padding: 0px 15px;
+   font-weight: bold;
+   color: white;
+}
+.nav__link:hover{
+   background-color: var(--second-main);
+}
+
+/* Content */
+#content{
+   background-image: url(../img/backgrounds/bg.png);
+   background-repeat: repeat-y;
+   background-size: cover;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+}
+
+/* About */
+.about{
+   background-image: url(../img/backgrounds/bg-about.svg);
+   background-size: cover;
+   background-repeat: no-repeat;
+   width: 94%;
+   height: 800px;
+   display: grid;
+   grid-template-columns: 1fr 1fr;
+   padding: 8% 55px 20px ;
+   gap: 40px;
+   margin-top: 40px;
+}
+
+.about__title{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+.about__title img{
+   height: 85%;
+}
+.about__content{
+   margin-top: 120px;
+}
+.about__content__title{
+   height: 70px;
+}
+.about__content__text{
+   padding-right: 40px;
+   color: white;
+   font-size: 1.6rem;
+   text-align: justify;
+}
+.skills{
+   display: grid;
+   grid-template-columns: 1fr 1fr;
+   grid-template-rows: 1fr 1fr;
+   row-gap: 15px ;
+}
+.skills span{
+   display: flex;
+   align-items: center;
+   gap: 10px;
+   font-size: 2rem;
+}
+.skills__span--1{
+   grid-column: 1/3;
+   font-weight: bold;
+   color: #6266c8;
+}
+.skills__span--2 {
+   color: #ffff;
+}
+
+.skills__span--1 img{
+   height: 40px;
+}
+.skills__span--2 img{
+   height: 20px;
+}
+
+/* Social media */
+.socialMediaTitle{
+   background-image: url(../img/backgrounds/bg-title-socialmedia.svg);
+   background-size: cover;
+   background-repeat: no-repeat;
+   width: 94%;
+   height: 805px;
+}
+.socialMediaTitle__container{
+   height: 100%;
+   display: flex;
+   justify-content: space-around;
+   gap: 80px;
+   padding: 80px 80px 200px;
+   align-items: center;
+}
+.socialMediaTitle__number{
+   font-family: 'Sergio Trendy';
+   color: white;
+   font-size: 25rem;
+   display: flex;
+   align-items: center;
+}
+.socialMediaTitle__img{
+   margin: 30px 0;
+   height: 350px;
+}
+
+.socialMediaContent{
+   background-image: url(../img/backgrounds/bg-content-socialmedia.svg);
+   background-size: cover;
+   background-repeat: no-repeat;
+   width: 94%;
+   height: 1625px;
+   margin: 40px 0;
+}
+
+/* Inka Kola */
+.ik{
+   height: 820px;
+   display: grid;
+   grid-template-columns: 4fr 6fr;
+   padding: 100px 80px;
+}
+.ik__content{
+   display: grid;
+   grid-template-rows: 100px 40px 1fr;
+   gap: 20px;
+   grid-template-columns: 1fr 1fr
+}
+.ik__content__title{
+   color: #ffff;
+   font-size: 5.5rem;
+   font-family: 'Sergio Trendy';
+   margin-top: 10px;
+   grid-column: 1/3;
+}
+.subtitle{
+   background-color: #ffff;
+   width: 100%;
+   padding: 0 15px;
+   border-radius: 20px;
+   display: flex;
+   align-items: center;
+   justify-content: space-around;
+   gap: 5px;
+}
+.subtitle img{
+   height: 25px;
+}
+.subtitle span{
+   font-size: 1.3rem;
+   color: var(--third-main);
+   font-weight: bolder;
+}
+.ik__content__text{
+   display: flex;
+   align-items: end;
+   padding-right: 40px;
+   font-size: 1.6rem;
+   color: #ffff;
+   grid-column: 1/3;
+}
+.ik__photos{
+   display: flex;
+   justify-content: center;
+   align-items: end;
+}
+.ik__photos img{
+   height: 550px;
+}
+
+/* New Year*/
+.ny{
+   height: 650px;
+   display: grid;
+   grid-template-columns: 6fr 4fr;
+   padding: 0 80px;
+}
+.ny__content{
+   display: grid;
+   grid-template-rows: 50px 100px 40px 1fr;
+   grid-template-columns: 1fr 1fr
+}
+.ny__content__leyend{
+   display: flex;
+   justify-content: end;
+   font-size: 3rem;
+   color: #ffff;
+   margin-top: 20px;
+   grid-column: 1/3;
+}
+.ny__content__title{
+   display: flex;
+   justify-content: end;
+   color: #ffff;
+   font-size: 5.2rem;
+   font-family: 'Sergio Trendy';
+   grid-column: 1/3;
+}
+.end{
+   grid-column: 2/3;
+}
+.ny__content__text{
+   display: flex;
+   align-items: end;
+   text-align: end;
+   font-size: 1.6rem;
+   color: #ffff;
+   grid-column: 1/3;
+}
+.ny__photos{
+   display: flex;
+   justify-content: center;
+   align-items: end;
+}
+.ny__photos img{
+   height: 550px;
+}
+
+/* Photograph */
+.photograph{
+   width: 94%;
+}
+.photographTitle{
+   background-image: url(../img/backgrounds/bg-title-photograph.svg);
+   background-size: cover;
+   background-repeat: no-repeat;
+}
+.photographTitle__container{
+   display: flex;
+   justify-content: space-around;
+   gap: 80px;
+   padding: 220px 80px 80px;
+   align-items: center;
+}
+.photographTitle__number{
+   font-family: 'Sergio Trendy';
+   color: white;
+   font-size: 25rem;
+   display: flex;
+   align-items: center;
+}
+.photographTitle__img{
+   margin: 30px 0;
+   height: 350px;
+}
+
+.photographContent{
+   background-image: url(../img/backgrounds/bg-content-photograph.svg);
+   background-size: cover;
+   background-repeat: no-repeat;
+   height: 1650px;
+}
+
+/* Photograph Sesion */
+.pSesion{
+   display: grid;
+   grid-template-columns: 1fr 1fr;
+   grid-template-rows: 1fr 5fr;
+   height: 830px;
+   padding: 20px 80px 80px;
+}
+.pSesion__title{
+   display: flex;
+   flex-direction: column;
+   align-items: end;
+   justify-content: space-evenly;
+   grid-column: 1/3;
+   margin-top: 20px;
+}
+.pSesion__title__legend{
+   font-size: 3rem;
+   color: white;
+   font-weight: bolder;
+}
+.pSesion__title__span{
+   font-family: 'Sergio Trendy';
+   font-size: 5.6rem;
+   color: white;
+}
+.pSesion__content{
+   display: grid;
+   grid-template-rows: 10fr 3fr;
+   grid-template-columns: 1fr 1fr;
+}
+.pSesion__content .subtitle{
+   height: 40px;
+   width: 80%;
+   align-self: flex-end;
+}
+.pSesion__content .subtitle span{
+   color: #a9abe5;
+}
+.pSesion__text{
+   color: #ffff;
+   font-size: 1.75rem;
+   grid-column: 1/3  ;
+   align-self: center;
+}
+.pSesion__img{
+   display: flex;
+   align-items: center;
+   justify-content: end;
+   align-items: end;
+}
+.pSesion__img img{
+   height: 530px;
+}
+
+/* Photograph Product */
+.pProduct{
+   display: grid;
+   grid-template-columns: 1.5fr 1fr;
+   grid-template-rows: 1fr 5fr;
+   height: 780px;
+   padding: 20px 80px 80px 100px;
+}
+.pProduct__title{
+   display: flex;
+   flex-direction: column;
+   align-items: start;
+   justify-content: space-evenly;
+   grid-column: 1/3;
+   margin-top: 20px;
+}
+.pProduct__title__legend{
+   font-size: 3rem;
+   color: white;
+   font-weight: bolder;
+}
+.pProduct__title__span{
+   font-family: 'Sergio Trendy';
+   font-size: 6rem;
+   color: white;
+}
+.pProduct__img{
+   display: flex;
+   grid-column: 1/2;
+   align-items: center;
+}
+.pProduct__img img{
+   height: 450px;
+}
+.pProduct__content{
+   display: grid;
+   grid-template-rows: 10fr 3fr;
+   grid-template-columns: 1fr 1fr;
+   row-gap: 20px;
+}
+.pProduct__content .subtitle{
+   height: 40px;
+   align-self: flex-end;
+   justify-self: end;
+   grid-column: 2/3;
+}
+.pProduct__content .subtitle span{
+   color: #a9abe5;
+}
+.pProduct__text{
+   color: #ffff;
+   font-size: 1.75rem;
+   grid-column: 1/3;
+   justify-self: end;
+   text-align: end;
+}
+
+#contact{
+   background-image: url(../img/backgrounds/bg-footer.svg);
+   background-size: cover;
+   height: 100vh;
+   margin-top: 50px;
+   padding: 140px 100px 100px;
+   display: flex;
+   justify-content: space-evenly;
+   align-items: center;
+   flex-direction: column;
+   gap: 50px;
+}
+.contact__banner{
+   height: 350px;
+}
+
+/* Footer */
+.footer{
+   display: flex;
+   gap: 60px;
+}
+.footer__container{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   gap: 10px;
+}
+.footer__container span{
+   font-size: 1.5rem;
+   color: white;
+}
+.footer__container__icon{
+   height: 45px;
+}
