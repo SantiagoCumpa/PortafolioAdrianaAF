@@ -696,7 +696,7 @@ body{
    }
 }
 
-@media (min-width:1400px) {
+@media (min-width:1500px) {
    .header{
       padding: 20px 50px;
    }
