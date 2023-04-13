@@ -5,10 +5,10 @@
    box-sizing: border-box;
    color: black;
 }
-
 body{
    font-family: 'Nunito','Sergio Trendy', 'sans serif';
    font-size: 18px;
+   width: 100%;
 }
 
 :root{
@@ -51,7 +51,6 @@ body{
    padding: 20px;
    background-color: var(--orange-bg);
    height: 160px;
-   width: 100%;
 }
 
 /* Logo */
@@ -72,11 +71,12 @@ body{
    font-family: 'Sergio Trendy';
 }
 
-/* navbar */
+/* Navbar */
 .navbar{
    display: flex;
    justify-content: space-evenly;
    align-items: center;
+   gap: 10px;
    width: 300px;
 }
 .nav__link{
@@ -84,15 +84,13 @@ body{
       background-color .5s,
       border-radius .5s,
       color .5s;
-   display: flex;
+      display: inline-block;
    align-items: center;
    text-decoration: none;
-   height: 40px;
    font-size: 1rem;
    font-weight: bold;
    border-radius: 5px;
-   margin: 3px 0;
-   padding: 0px 15px;
+   padding: 5px 15px;
    font-weight: bold;
    color: white;
 }
@@ -104,12 +102,12 @@ body{
 /* Content */
 #content{
    background-image: url(../img/backgrounds/bg.png);
-   background-repeat: repeat-y;
    background-size: contain;
+   background-repeat: repeat-y;
    display: flex;
    flex-direction: column;
    align-items: center;
-   padding: 40px;
+   padding: 40px 40px 200px;
    gap: 50px;
 }
 /* About */
@@ -147,7 +145,7 @@ body{
    border-radius: 15px;
 }
 .about__content__title{
-   height: 60px;
+
 }
 .about__content__text{
    color: #ffff;
@@ -213,13 +211,13 @@ body{
                inset 5px 5px 15px rgba(80, 80, 80, 0.166);
 }
 .social-media__title__h2{
-   font-size: 13rem;
+   font-size: 10rem;
    font-family: 'Sergio Trendy';
    color: #ffff;
    margin: 0;
 }
 .social-media__title__img{
-   height: 150px;
+   height: 100px;
 }
 .social-media__content{
    display: flex;
@@ -247,7 +245,7 @@ body{
 .ik__content__title__h3{
    color: #ffff;
    font-family: 'Sergio Trendy';
-   font-size: 3.5rem;
+   font-size: 2.65rem;
    margin: 0;
 }
 .ik__content__text{
@@ -284,12 +282,12 @@ body{
 .ny__content__title__h4{
    color: #ffff;
    margin: 0;
-   font-size: 2rem;
+   font-size: 1.65rem;
 }
 .ny__content__title__h3{
    color: #ffff;
    font-family: 'Sergio Trendy';
-   font-size: 3.5rem;
+   font-size: 2.65rem;
    margin: 0 0 10px;
 }
 .ny__content__text{
@@ -353,13 +351,13 @@ body{
                inset 5px 5px 15px rgba(80, 80, 80, 0.166);
 }
 .photograph__title__h2{
-   font-size: 13rem;
+   font-size: 10rem;
    font-family: 'Sergio Trendy';
    color: #ffff;
    margin: 0;
 }
 .photograph__title__img{
-   height: 170px;
+   height: 100px;
 }
 .photograph__content{
    display: flex;
@@ -400,12 +398,12 @@ body{
 .pSesion__title__h4{
    color: #ffff;
    margin: 0;
-   font-size: 2rem;
+   font-size: 1.65rem;
 }
 .pSesion__title__h3{
    color: #ffff;
    font-family: 'Sergio Trendy';
-   font-size: 3.5rem;
+   font-size: 2.65rem;
    margin: 0 0 10px;
 }
 .pSesion__content{
@@ -446,12 +444,12 @@ body{
 .pProduct__title__h4{
    color: #ffff;
    margin: 0;
-   font-size: 2rem;
+   font-size: 1.65rem;
 }
 .pProduct__title__h3{
    color: #ffff;
    font-family: 'Sergio Trendy';
-   font-size: 3.5rem;
+   font-size: 2.65rem;
    margin: 0 0 10px;
 }
 .pProduct__content{
@@ -483,11 +481,10 @@ body{
 
 /* Contact */
 #contact{
-   /* background-image: url(../img/backgrounds/bg-footer.svg);
-   background-size: cover; */
-   background-color: gray;
-   height: 100vh;
-   padding: 140px 100px 100px;
+   background-image: url(../img/backgrounds/bg-footer.svg);
+   background-size: cover;
+   margin-top: -170px;
+   padding: 150px 100px;
    display: flex;
    justify-content: space-evenly;
    align-items: center;
@@ -495,7 +492,8 @@ body{
    gap: 50px;
 }
 .contact__banner{
-   height: 100px;
+   width: 70%;
+   height: auto;
 }
 
 /* Footer */
@@ -517,10 +515,4 @@ body{
 
 img{
    height: 10px;
-}
-
-@media (min-width:100px) {
-   #content{
-      background-size: cover;
-   }
 }
