@@ -8,52 +8,68 @@
 
 body{
    font-family: 'Nunito','Sergio Trendy', 'sans serif';
-   min-height: 100vh;
+   font-size: 18px;
 }
 
 :root{
-   --first-main: #adb6e9;
-   --second-main: #9799d1;
-   --third-main: #F4A276;
+   --first-main: #949DCE;
+   --second-main: #8587C1;
+   --orange-bg: #F4A276;
+   --purple-bg: #A9B8EA;
+   --blue: #5667BA;
 }
 
 /* Section Banner */
 #banner{
-   background-image:  url(../img/backgrounds/bgBanner.svg);
+   background-color: var(--second-main);
    height: 100vh;
-   background-repeat: no-repeat;
-   background-size: cover;
    display: flex;
    align-items: center;
    justify-content: center;
+   animation-name: backgroundColor;
+   animation-duration: 3s;
+   animation-iteration-count: infinite;
+   animation-direction: alternate;
 }
 .banner__img{
    margin: 0 60px;
    width: 75%;
+   height: auto;
+}
+@keyframes backgroundColor {
+   100%{
+      background-color: var(--purple-bg);
+   }
 }
 
 /* Header */
 .header{
    display: flex;
+   flex-direction: column;
    justify-content: space-between;
-   padding: 10px 20px;
-   background-color: var(--third-main);
-   height: 80px;
+   align-items: center;
+   padding: 20px;
+   background-color: var(--orange-bg);
+   height: 160px;
+   width: 100%;
 }
 
 /* Logo */
 .header__logo{
    display: flex;
    justify-content: space-between;
-   width: 150px;
    gap: 20px;
+}
+.header__logo__img{
+   height: 60px;
 }
 .header__logo__span{
    display: flex;
    align-items: center;
    color: white;
    font-weight: bolder;
-   font-size: 1.5rem;
+   font-size: 2rem;
+   font-family: 'Sergio Trendy';
 }
 
 /* navbar */
@@ -84,370 +100,393 @@ body{
    background-color: var(--second-main);
 }
 
+
 /* Content */
 #content{
    background-image: url(../img/backgrounds/bg.png);
    background-repeat: repeat-y;
-   background-size: cover;
+   background-size: contain;
    display: flex;
    flex-direction: column;
    align-items: center;
+   padding: 40px;
+   gap: 50px;
 }
-
 /* About */
 .about{
-   background-image: url(../img/backgrounds/bg-about.svg);
-   background-size: cover;
-   background-repeat: no-repeat;
-   width: 94%;
-   height: 800px;
+   padding: 30px 30px;
+   background-color: var(--purple-bg);
+   border-radius: 15px;
    display: grid;
-   grid-template-columns: 1fr 1fr;
-   padding: 8% 55px 20px ;
-   gap: 40px;
-   margin-top: 40px;
+   gap: 30px;
+   box-shadow: -10px -10px 15px rgba(69, 69, 69, 0.208),
+               10px 10px 15px rgba(82, 82, 82, 0.197);
 }
-
-.about__title{
+   /* Foto Adriana */
+.about__img{
    display: flex;
    justify-content: center;
-   align-items: center;
+   align-content: center;
+   padding: 30px;
+   grid-row: 2/3;
+   border-radius: 15px;
+   box-shadow: inset -5px -5px 15px rgba(76, 76, 76, 0.177),
+               inset 5px 5px 15px rgba(80, 80, 80, 0.166);
 }
-.about__title img{
-   height: 85%;
+.about__img img{
+   width: 100%;
+   height: auto;
+   border-radius: 15px;
 }
+   /* Contenido del about */
 .about__content{
-   margin-top: 120px;
+   text-align: center;
+   padding: 30px;
+   box-shadow: -5px -5px 15px rgba(76, 76, 76, 0.177), 
+               5px 5px 15px rgba(80, 80, 80, 0.166);
+   border-radius: 15px;
 }
 .about__content__title{
-   height: 70px;
+   height: 60px;
 }
 .about__content__text{
-   padding-right: 40px;
-   color: white;
-   font-size: 1.6rem;
+   color: #ffff;
+   font-size: 1.4rem;
    text-align: justify;
 }
-.skills{
+   /* Habilidades */
+.about__content__skills{
    display: grid;
    grid-template-columns: 1fr 1fr;
    grid-template-rows: 1fr 1fr;
-   row-gap: 15px ;
-}
-.skills span{
-   display: flex;
-   align-items: center;
    gap: 10px;
-   font-size: 2rem;
 }
-.skills__span--1{
+.about__content__skills div{
+   display: flex;
+   align-items: center;
+   gap: 15px;
+}
+.about__content__skills__wrapper--mod{
    grid-column: 1/3;
-   font-weight: bold;
-   color: #6266c8;
 }
-.skills__span--2 {
+.about__content__skills__wrapper span{
    color: #ffff;
+   font-size: 1.4rem;
+}
+.about__content__skills__wrapper--mod span{
+   color: var(--blue);
+   font-weight: bolder;
+   font-size: 1.4rem;
+}
+.about__content__skills__wrapper--mod  img{
+   height: 30px;
+}
+.about__content__skills__wrapper img{
+   height: 15px;
 }
 
-.skills__span--1 img{
-   height: 40px;
-}
-.skills__span--2 img{
-   height: 20px;
-}
-
-/* Social media */
-.socialMediaTitle{
-   background-image: url(../img/backgrounds/bg-title-socialmedia.svg);
-   background-size: cover;
-   background-repeat: no-repeat;
-   width: 94%;
-   height: 805px;
-}
-.socialMediaTitle__container{
-   height: 100%;
+/* Habilidades/Skills */
+.habilidades{
    display: flex;
-   justify-content: space-around;
-   gap: 80px;
-   padding: 80px 80px 200px;
-   align-items: center;
+   flex-direction: column;
+   gap: 30px;
 }
-.socialMediaTitle__number{
+/* SocialMedia */
+.social-media{
+   padding: 30px;
+   background-color: var(--orange-bg);
+   border-radius: 15px;
+   box-shadow: -10px -10px 15px rgba(65, 65, 65, 0.208),
+               10px 10px 15px rgba(67, 67, 67, 0.197);
+   display: flex;
+   flex-direction: column;
+   gap: 30px;
+}
+.social-media__title{
+   border-radius: 15px;
+   padding: 0 30px 50px;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: space-evenly;
+   box-shadow: inset -5px -5px 15px rgba(76, 76, 76, 0.177), 
+               inset 5px 5px 15px rgba(80, 80, 80, 0.166);
+}
+.social-media__title__h2{
+   font-size: 13rem;
    font-family: 'Sergio Trendy';
-   color: white;
-   font-size: 25rem;
+   color: #ffff;
+   margin: 0;
+}
+.social-media__title__img{
+   height: 150px;
+}
+.social-media__content{
    display: flex;
-   align-items: center;
+   flex-direction: column;
+   gap: 30px;
+   border-radius: 15px;
+   padding: 30px;
+   box-shadow: -5px -5px 15px rgba(76, 76, 76, 0.177),
+               5px 5px 15px rgba(80, 80, 80, 0.166);
 }
-.socialMediaTitle__img{
-   margin: 30px 0;
-   height: 350px;
-}
-
-.socialMediaContent{
-   background-image: url(../img/backgrounds/bg-content-socialmedia.svg);
-   background-size: cover;
-   background-repeat: no-repeat;
-   width: 94%;
-   height: 1625px;
-   margin: 40px 0;
-}
-
-/* Inka Kola */
+   /* INKA KOLA */
 .ik{
-   height: 820px;
    display: grid;
-   grid-template-columns: 4fr 6fr;
-   padding: 100px 80px;
+   gap: 20px;
 }
 .ik__content{
    display: grid;
-   grid-template-rows: 100px 40px 1fr;
    gap: 20px;
-   grid-template-columns: 1fr 1fr
 }
 .ik__content__title{
-   color: #ffff;
-   font-size: 5.5rem;
-   font-family: 'Sergio Trendy';
-   margin-top: 10px;
-   grid-column: 1/3;
-}
-.subtitle{
-   background-color: #ffff;
-   width: 100%;
-   padding: 0 15px;
-   border-radius: 20px;
    display: flex;
-   align-items: center;
-   justify-content: space-around;
-   gap: 5px;
+   flex-direction: column;
+   gap: 10px;
 }
-.subtitle img{
-   height: 25px;
-}
-.subtitle span{
-   font-size: 1.3rem;
-   color: var(--third-main);
-   font-weight: bolder;
+.ik__content__title__h3{
+   color: #ffff;
+   font-family: 'Sergio Trendy';
+   font-size: 3.5rem;
+   margin: 0;
 }
 .ik__content__text{
-   display: flex;
-   align-items: end;
-   padding-right: 40px;
-   font-size: 1.6rem;
    color: #ffff;
-   grid-column: 1/3;
+   font-size: 1.4rem;
+   text-align: justify;
 }
 .ik__photos{
    display: flex;
+   flex-direction: column;
    justify-content: center;
-   align-items: end;
+   align-items: center;
+   gap: 10px;
+   padding: 20px;
+   border-radius: 15px;
+   box-shadow: inset -5px -5px 15px rgba(76, 76, 76, 0.177),
+               inset 5px 5px 15px rgba(80, 80, 80, 0.166);
 }
 .ik__photos img{
-   height: 550px;
+   width: 100%;
+   height: auto;
+   border-radius: 15px;
 }
 
-/* New Year*/
+/* AÑO NUEVO */
 .ny{
-   height: 650px;
    display: grid;
-   grid-template-columns: 6fr 4fr;
-   padding: 0 80px;
+   gap: 20px;
 }
 .ny__content{
    display: grid;
-   grid-template-rows: 50px 100px 40px 1fr;
-   grid-template-columns: 1fr 1fr
+   gap: 20px;
 }
-.ny__content__leyend{
-   display: flex;
-   justify-content: end;
-   font-size: 3rem;
+.ny__content__title__h4{
    color: #ffff;
-   margin-top: 20px;
-   grid-column: 1/3;
+   margin: 0;
+   font-size: 2rem;
 }
-.ny__content__title{
-   display: flex;
-   justify-content: end;
+.ny__content__title__h3{
    color: #ffff;
-   font-size: 5.2rem;
    font-family: 'Sergio Trendy';
-   grid-column: 1/3;
-}
-.end{
-   grid-column: 2/3;
+   font-size: 3.5rem;
+   margin: 0 0 10px;
 }
 .ny__content__text{
-   display: flex;
-   align-items: end;
-   text-align: end;
-   font-size: 1.6rem;
    color: #ffff;
-   grid-column: 1/3;
+   font-size: 1.4rem;
+   text-align: justify;
 }
 .ny__photos{
    display: flex;
+   flex-direction: column;
    justify-content: center;
-   align-items: end;
+   align-items: center;
+   gap: 10px;
+   padding: 20px;
+   border-radius: 15px;
+   box-shadow: inset -5px -5px 15px rgba(76, 76, 76, 0.177),
+               inset 5px 5px 15px rgba(80, 80, 80, 0.166);
 }
 .ny__photos img{
-   height: 550px;
+   width: 100%;
+   height: auto;
+   border-radius: 15px;
 }
 
-/* Photograph */
+.social-media__content .sub{
+   background-color: #ffff;
+   border-radius: 15px;
+   padding: 5px 15px;
+   display: flex;
+   justify-content: center;
+   gap: 10px;
+   width: 220px;
+}
+.social-media__content .sub img{
+   height: 20px;
+}
+.social-media__content .sub span{
+   color: var(--orange-bg);
+   font-weight: bold;
+}
+
+/* Photography */
 .photograph{
-   width: 94%;
-}
-.photographTitle{
-   background-image: url(../img/backgrounds/bg-title-photograph.svg);
-   background-size: cover;
-   background-repeat: no-repeat;
-}
-.photographTitle__container{
    display: flex;
-   justify-content: space-around;
-   gap: 80px;
-   padding: 220px 80px 80px;
-   align-items: center;
+   flex-direction: column;
+   gap: 30px;
+   padding: 30px;
+   background-color: var(--purple-bg);
+   border-radius: 15px;
+   box-shadow: -10px -10px 15px rgba(30, 30, 30, 0.208),
+               10px 10px 15px rgba(41, 41, 41, 0.197);
 }
-.photographTitle__number{
+.photograph__title{
+   border-radius: 15px;
+   padding: 0 30px 50px;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: space-evenly;
+   box-shadow: inset -5px -5px 15px rgba(76, 76, 76, 0.177), 
+               inset 5px 5px 15px rgba(80, 80, 80, 0.166);
+}
+.photograph__title__h2{
+   font-size: 13rem;
    font-family: 'Sergio Trendy';
-   color: white;
-   font-size: 25rem;
+   color: #ffff;
+   margin: 0;
+}
+.photograph__title__img{
+   height: 170px;
+}
+.photograph__content{
    display: flex;
-   align-items: center;
-}
-.photographTitle__img{
-   margin: 30px 0;
-   height: 350px;
-}
-
-.photographContent{
-   background-image: url(../img/backgrounds/bg-content-photograph.svg);
-   background-size: cover;
-   background-repeat: no-repeat;
-   height: 1650px;
+   flex-direction: column;
+   gap: 30px;
+   border-radius: 15px;
+   padding: 30px;
+   box-shadow: -5px -5px 15px rgba(76, 76, 76, 0.177),
+               5px 5px 15px rgba(80, 80, 80, 0.166);
 }
 
-/* Photograph Sesion */
+
+.photograph__content .sub{
+   background-color: #ffff;
+   border-radius: 15px;
+   padding: 5px 15px;
+   display: flex;
+   justify-content: center;
+   gap: 10px;
+   width: 220px;
+}
+.photograph__content .sub img{
+   height: 20px;
+}
+.photograph__content .sub span{
+   color: var(--purple-bg);
+   font-weight: bold;
+}
+
+   /* SESION FOTOGRAFICA */
 .pSesion{
    display: grid;
-   grid-template-columns: 1fr 1fr;
-   grid-template-rows: 1fr 5fr;
-   height: 830px;
-   padding: 20px 80px 80px;
+   gap: 20px;
 }
 .pSesion__title{
-   display: flex;
-   flex-direction: column;
-   align-items: end;
-   justify-content: space-evenly;
-   grid-column: 1/3;
-   margin-top: 20px;
+   display: grid;
 }
-.pSesion__title__legend{
-   font-size: 3rem;
-   color: white;
-   font-weight: bolder;
+.pSesion__title__h4{
+   color: #ffff;
+   margin: 0;
+   font-size: 2rem;
 }
-.pSesion__title__span{
+.pSesion__title__h3{
+   color: #ffff;
    font-family: 'Sergio Trendy';
-   font-size: 5.6rem;
-   color: white;
+   font-size: 3.5rem;
+   margin: 0 0 10px;
 }
 .pSesion__content{
-   display: grid;
-   grid-template-rows: 10fr 3fr;
-   grid-template-columns: 1fr 1fr;
-}
-.pSesion__content .subtitle{
-   height: 40px;
-   width: 80%;
-   align-self: flex-end;
-}
-.pSesion__content .subtitle span{
-   color: #a9abe5;
-}
-.pSesion__text{
-   color: #ffff;
-   font-size: 1.75rem;
-   grid-column: 1/3  ;
-   align-self: center;
-}
-.pSesion__img{
-   display: flex;
-   align-items: center;
-   justify-content: end;
-   align-items: end;
-}
-.pSesion__img img{
-   height: 530px;
-}
-
-/* Photograph Product */
-.pProduct{
-   display: grid;
-   grid-template-columns: 1.5fr 1fr;
-   grid-template-rows: 1fr 5fr;
-   height: 780px;
-   padding: 20px 80px 80px 100px;
-}
-.pProduct__title{
    display: flex;
    flex-direction: column;
-   align-items: start;
-   justify-content: space-evenly;
-   grid-column: 1/3;
-   margin-top: 20px;
+   gap: 30px;
 }
-.pProduct__title__legend{
-   font-size: 3rem;
-   color: white;
-   font-weight: bolder;
-}
-.pProduct__title__span{
-   font-family: 'Sergio Trendy';
-   font-size: 6rem;
-   color: white;
-}
-.pProduct__img{
-   display: flex;
-   grid-column: 1/2;
-   align-items: center;
-}
-.pProduct__img img{
-   height: 450px;
-}
-.pProduct__content{
-   display: grid;
-   grid-template-rows: 10fr 3fr;
-   grid-template-columns: 1fr 1fr;
-   row-gap: 20px;
-}
-.pProduct__content .subtitle{
-   height: 40px;
-   align-self: flex-end;
-   justify-self: end;
-   grid-column: 2/3;
-}
-.pProduct__content .subtitle span{
-   color: #a9abe5;
-}
-.pProduct__text{
+.pSesion__content__text{
    color: #ffff;
-   font-size: 1.75rem;
-   grid-column: 1/3;
-   justify-self: end;
-   text-align: end;
+   font-size: 1.4rem;
+   text-align: justify;
+}
+.pSesion__content__photos{
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   gap: 10px;
+   padding: 20px;
+   border-radius: 15px;
+   box-shadow: inset -5px -5px 15px rgba(76, 76, 76, 0.177),
+               inset 5px 5px 15px rgba(80, 80, 80, 0.166);
+}
+.pSesion__content__photos img{
+   width: 100%;
+   height: auto;
+   border-radius: 15px;
 }
 
+/* PRODUCTO */
+.pProduct{
+   display: grid;
+   gap: 20px;
+}
+.pProduct__title{
+   display: grid;
+}
+.pProduct__title__h4{
+   color: #ffff;
+   margin: 0;
+   font-size: 2rem;
+}
+.pProduct__title__h3{
+   color: #ffff;
+   font-family: 'Sergio Trendy';
+   font-size: 3.5rem;
+   margin: 0 0 10px;
+}
+.pProduct__content{
+   display: flex;
+   flex-direction: column;
+   gap: 30px;
+}
+.pProduct__content__text{
+   color: #ffff;
+   font-size: 1.4rem;
+   text-align: justify;
+}
+.pProduct__content__photos{
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   gap: 10px;
+   padding: 20px;
+   border-radius: 15px;
+   box-shadow: inset -5px -5px 15px rgba(76, 76, 76, 0.177),
+               inset 5px 5px 15px rgba(80, 80, 80, 0.166);
+}
+.pProduct__content__photos img{
+   width: 100%;
+   height: auto;
+   border-radius: 15px;
+}
+
+/* Contact */
 #contact{
-   background-image: url(../img/backgrounds/bg-footer.svg);
-   background-size: cover;
+   /* background-image: url(../img/backgrounds/bg-footer.svg);
+   background-size: cover; */
+   background-color: gray;
    height: 100vh;
-   margin-top: 50px;
    padding: 140px 100px 100px;
    display: flex;
    justify-content: space-evenly;
@@ -456,13 +495,11 @@ body{
    gap: 50px;
 }
 .contact__banner{
-   height: 350px;
+   height: 100px;
 }
 
 /* Footer */
 .footer{
-   display: flex;
-   gap: 60px;
 }
 .footer__container{
    display: flex;
@@ -470,10 +507,20 @@ body{
    align-items: center;
    gap: 10px;
 }
-.footer__container span{
+.footer__container__span{
    font-size: 1.5rem;
    color: white;
 }
 .footer__container__icon{
-   height: 45px;
+   height: 30px;
+}
+
+img{
+   height: 10px;
+}
+
+@media (min-width:100px) {
+   #content{
+      background-size: cover;
+   }
 }
