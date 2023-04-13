@@ -66,7 +66,6 @@ body{
    display: flex;
    align-items: center;
    color: white;
-   font-weight: bolder;
    font-size: 2rem;
    font-family: 'Sergio Trendy';
 }
@@ -77,7 +76,6 @@ body{
    justify-content: space-evenly;
    align-items: center;
    gap: 10px;
-   width: 300px;
 }
 .nav__link{
    transition:
@@ -90,8 +88,7 @@ body{
    font-size: 1rem;
    font-weight: bold;
    border-radius: 5px;
-   padding: 5px 15px;
-   font-weight: bold;
+   padding: 10px 15px;
    color: white;
 }
 .nav__link:hover{
@@ -138,6 +135,9 @@ body{
 }
    /* Contenido del about */
 .about__content{
+   display: flex;
+   flex-direction: column;
+   justify-content: space-evenly;
    text-align: center;
    padding: 30px;
    box-shadow: -5px -5px 15px rgba(76, 76, 76, 0.177), 
@@ -149,7 +149,7 @@ body{
 }
 .about__content__text{
    color: #ffff;
-   font-size: 1.4rem;
+   font-size: 1.3rem;
    text-align: justify;
 }
    /* Habilidades */
@@ -169,12 +169,12 @@ body{
 }
 .about__content__skills__wrapper span{
    color: #ffff;
-   font-size: 1.4rem;
+   font-size: 1.3rem;
 }
 .about__content__skills__wrapper--mod span{
    color: var(--blue);
    font-weight: bolder;
-   font-size: 1.4rem;
+   font-size: 1.3rem;
 }
 .about__content__skills__wrapper--mod  img{
    height: 30px;
@@ -211,7 +211,7 @@ body{
                inset 5px 5px 15px rgba(80, 80, 80, 0.166);
 }
 .social-media__title__h2{
-   font-size: 10rem;
+   font-size: 9rem;
    font-family: 'Sergio Trendy';
    color: #ffff;
    margin: 0;
@@ -351,7 +351,7 @@ body{
                inset 5px 5px 15px rgba(80, 80, 80, 0.166);
 }
 .photograph__title__h2{
-   font-size: 10rem;
+   font-size: 9rem;
    font-family: 'Sergio Trendy';
    color: #ffff;
    margin: 0;
@@ -392,18 +392,18 @@ body{
    display: grid;
    gap: 20px;
 }
-.pSesion__title{
+.pSesion__content__title{
    display: grid;
 }
-.pSesion__title__h4{
+.pSesion__content__title__h4{
    color: #ffff;
    margin: 0;
-   font-size: 1.65rem;
+   font-size: 1.2rem;
 }
-.pSesion__title__h3{
+.pSesion__content__title__h3{
    color: #ffff;
    font-family: 'Sergio Trendy';
-   font-size: 2.65rem;
+   font-size: 2.2rem;
    margin: 0 0 10px;
 }
 .pSesion__content{
@@ -413,10 +413,10 @@ body{
 }
 .pSesion__content__text{
    color: #ffff;
-   font-size: 1.4rem;
+   font-size: 1.3rem;
    text-align: justify;
 }
-.pSesion__content__photos{
+.pSesion__photos{
    display: flex;
    flex-direction: column;
    justify-content: center;
@@ -427,7 +427,7 @@ body{
    box-shadow: inset -5px -5px 15px rgba(76, 76, 76, 0.177),
                inset 5px 5px 15px rgba(80, 80, 80, 0.166);
 }
-.pSesion__content__photos img{
+.pSesion__photos img{
    width: 100%;
    height: auto;
    border-radius: 15px;
@@ -438,18 +438,15 @@ body{
    display: grid;
    gap: 20px;
 }
-.pProduct__title{
-   display: grid;
-}
-.pProduct__title__h4{
+.pProduct__content__title__h4{
    color: #ffff;
    margin: 0;
-   font-size: 1.65rem;
+   font-size: 1.2rem;
 }
-.pProduct__title__h3{
+.pProduct__content__title__h3{
    color: #ffff;
    font-family: 'Sergio Trendy';
-   font-size: 2.65rem;
+   font-size: 2.2rem;
    margin: 0 0 10px;
 }
 .pProduct__content{
@@ -459,10 +456,10 @@ body{
 }
 .pProduct__content__text{
    color: #ffff;
-   font-size: 1.4rem;
+   font-size: 1.2rem;
    text-align: justify;
 }
-.pProduct__content__photos{
+.pProduct__photos{
    display: flex;
    flex-direction: column;
    justify-content: center;
@@ -473,7 +470,7 @@ body{
    box-shadow: inset -5px -5px 15px rgba(76, 76, 76, 0.177),
                inset 5px 5px 15px rgba(80, 80, 80, 0.166);
 }
-.pProduct__content__photos img{
+.pProduct__photos img{
    width: 100%;
    height: auto;
    border-radius: 15px;
@@ -515,4 +512,259 @@ body{
 }
 .footer__container__icon{
    height: 25px;
+}
+
+/* MEDIA QUERIES */
+@media (min-width: 650px){
+   .about__content__title{
+      height: 16%;
+   }
+
+   .social-media__title,
+   .photograph__title{
+      flex-direction: row;
+      padding: 20px 0;
+   }
+   .social-media__title__img,
+   .photograph__title__img{
+      height: 140px;
+   }
+
+   .ik__content__title__h3,
+   .ny__content__title__h3,
+   .pSesion__content__title__h3,
+   .pProduct__content__title__h3{
+      font-size: 4rem;
+   }
+
+   .ny__content__title__h4,
+   .pSesion__content__title__h4,
+   .pProduct__content__title__h4{
+      font-size: 2rem;
+   }
+
+   .ik__content__text,
+   .ny__content__text,
+   .pSesion__content__text,
+   .pProduct__content__text{
+      font-size: 1.5rem;
+   }
+
+   .contact__banner{
+      width:  80%;
+   }
+}
+
+@media (min-width: 750px){
+   .ik__photos{
+      display: grid;
+      grid-template-columns: 8fr 7fr;
+   }
+   .ny__photos{
+      display: grid;
+      grid-template-columns: 7fr 8fr;
+   }
+   .ik__photos, .ny__photos,
+   .pSesion__photos,
+   .pProduct__photos{
+      padding: 50px;
+   }
+}
+
+@media (min-width:1001px){
+   .header{
+      flex-direction: row;
+      padding: 10px 30px;
+      height: 100px;
+   }
+   .header__logo{
+      gap: 30px;
+   }
+   .header__logo__img{
+      height: 70px;
+   }
+   .header__logo__span{
+      font-size: 2rem;
+   }
+   .nav__link{
+      font-size: 1.1rem;
+      padding: 10px 15px;
+   }
+
+   .about{
+      grid-template-columns: 1fr 1fr;
+   }
+   .about__img{
+      grid-column: 2/3;
+      grid-row: 1/2;
+   }
+   .about__content__title{
+      height: 15%;
+   }
+
+   .social-media__content,
+   .photograph__content{
+      gap: 60px;
+      padding: 100px;
+   }
+
+   .social-media__title,
+   .photograph__title{
+      padding: 100px 20px;
+   }
+   .social-media__title__img,
+   .photograph__title__img{
+      height: 250px;
+   }
+   .social-media__title__h2,
+   .photograph__title__h2{
+      font-size: 16rem;
+   }
+
+   .ik, .ny{
+      grid-template-columns: 1fr 1fr;
+   }
+   .ik__photos,
+   .ny__photos,
+   .pSesion__photos,
+   .pProduct__photos{
+      padding: 20px;
+   }
+
+   .ik__photos{
+      padding-right: 30px;
+   }
+   .ny__photos, .pProduct__photos{
+      grid-column: 1/2;
+      grid-row: 1/2;
+   }
+   .ny__content{
+      grid-column: 2/3;
+      gap: 40px;
+   }
+   .ik__content__text{
+      padding-right: 30%;
+      display: flex;
+      align-items: end;
+   }
+   .ny__content__title{
+      display: flex;
+      flex-direction: column;
+      align-items: end;
+   }
+   .ny__content__text{
+      padding-left: 30%;
+   }
+
+   .pSesion{
+      grid-template-columns: 1fr 1fr;
+   }
+   .pSesion__content{
+      justify-content: space-between;
+   }
+   .pSesion__content__text{
+      padding-right: 30%;
+   }
+
+   .pProduct{
+      grid-template-columns: 1fr 1fr;
+   }
+   .pProduct__photos{
+      grid-column: 1/2;
+      grid-row: 1/1;
+   }
+   .pProduct__content{
+      justify-content: space-between;
+   }
+   .pProduct__content__title{
+      display: flex;
+      flex-direction: column;
+      align-items: end;
+   }
+   .pProduct__content__text{
+      padding-left: 30%;
+   }
+
+   #contact{
+      padding-top: 150px;
+   }
+   .contact__banner{
+      width:  70%;
+   }
+   .footer{
+      flex-direction: row;
+   }
+}
+
+@media (min-width:1400px) {
+   .header{
+      padding: 20px 50px;
+   }
+   .header__logo__img{
+      height: 100px;
+   }
+   .header__logo__span{
+      font-size: 3rem;
+   }
+   .nav__link{
+      font-size: 1.5rem;
+      padding: 15px 20px;
+   }
+
+   .about__content{
+      padding: 50px;
+   }
+   .about__img{
+      padding: 40px;
+   }
+   .about__content__text{
+      font-size: 1.8rem;
+   }
+   .about__content__skills{
+      gap: 20px;
+   }
+   .about__content__skills__wrapper span{
+      font-size: 1.7rem;
+   }
+   .about__content__skills__wrapper--mod span{
+      font-size: 1.7rem;
+   }
+
+   .ik__content__title__h3,
+   .ny__content__title__h3,
+   .pSesion__content__title__h3,
+   .pProduct__content__title__h3{
+      font-size: 5rem;
+   }
+
+   .ik__content__text,
+   .ny__content__text,
+   .pSesion__content__text,
+   .pProduct__content__text{
+      font-size: 1.7rem;
+   }
+
+   .social-media__content .sub,
+   .ny__content .sub,
+   .pProduct__content .sub,
+   .pSesion__content .sub{
+      width: 300px;
+      font-size: 1.25rem;
+      justify-content: space-evenly;
+      border-radius: 20px;
+   }
+
+   .social-media__content .sub img,
+   .ny__content .sub img,
+   .pProduct__content .sub img,
+   .pSesion__content .sub img{
+      height: 30px;
+   }
+
+   .social-media__content .sub span,
+   .ny__content .sub span,
+   .pProduct__content .sub span,
+   .pSesion__content .sub span{
+      font-size: 1.5rem;
+   }
 }
