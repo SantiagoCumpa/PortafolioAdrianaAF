@@ -150,8 +150,9 @@ body{
 }
 .about__content__text{
    color: #ffff;
-   font-size: 1.3rem;
+   font-size: 1.4rem;
    text-align: justify;
+   padding: 0 5px;
 }
    /* Habilidades */
 .about__content__skills{
@@ -159,6 +160,7 @@ body{
    grid-template-columns: 1fr 1fr;
    grid-template-rows: 1fr 1fr;
    gap: 10px;
+   padding: 0 5px;
 }
 .about__content__skills div{
    display: flex;
